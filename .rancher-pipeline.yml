@@ -1,0 +1,7 @@
+stages:
+- name: build
+  steps:
+  - runScriptConfig:
+      image: maven
+      shellScript: mvn clean install
+timeout: 60
