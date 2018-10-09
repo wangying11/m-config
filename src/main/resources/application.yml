@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wangying11/config-repo.git
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:8761/eureka/
+  instance:
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+      preferIpAddress: true
+management:
+  endpoints:
+    web:
+      expose: "*"
+server:
+  port: 8888
